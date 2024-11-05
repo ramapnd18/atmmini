@@ -1,0 +1,129 @@
+/* styles.css */
+
+/* Reset margin dan padding */
+body, h1, h2, h3, p, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f0f4f8;
+    color: #021526;
+    
+}
+
+nav {
+    background: #021526;
+    color: #fff;
+    /* padding: 10px 20px; */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #03346E;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+    max-width: 880px;
+    margin: auto;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+h2 {
+    color: #03346E;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #021526;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background: #03346E;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #6EACDA;
+}
+
+canvas {
+    margin: 20px 0;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #03346E; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    text-align: center; /* Teks rata tengah */
+    /* padding: 20px; Ruang dalam */
+    position: relative; /* Memastikan footer tetap di bawah */
+    bottom: 0; /* Menempatkan footer di bawah */
+    width: 100%; /* Memastikan footer mengambil lebar penuh */
+}
+
+.footer-content ul {
+    list-style-type: none; /* Menghapus bullet dari list */
+    padding: 0; /* Menghapus padding default */
+}
+
+.footer-content li {
+    padding: 5px 0;/* Menambahkan jarak antara item list */
+}

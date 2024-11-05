@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.2/math.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="linear.html">Fungsi Linear</a></li>
+            <li><a href="rasional.html">Fungsi Rasional</a></li>
+            <li><a href="irasional.html">Fungsi Irasional</a></li>
+            <li><a href="geogebra.html">Geogebra</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Belajar Kalkulus Dengan Mudah</h1>
+    </header>
+    
+    <main>
+        <section id="fungsi-linear">
+            <h2>Fungsi Linear</h2>
+            <div class="materi">
+                <h3>Materi</h3>
+                <p>Fungsi linear adalah fungsi yang membentuk garis lurus ketika digambarkan dalam sebuah grafik. Bentuk umum dari fungsi linear adalah y = mx + c, di mana m adalah gradien atau kemiringan garis, dan c adalah titik potong dengan sumbu y.</p>
+            </div>
+            <div class="rumus">
+                <h3>Rumus</h3>
+                <p>y = mx + c</p>
+            </div>
+            <div class="contoh">
+                <h3>Contoh Soal</h3>
+                <p>Misalkan m = 2 dan c = 3. Fungsi linearnya adalah y = 2x + 3. Hitung nilai y ketika x = 4.</p>
+                <p>Penyelesaian: y = 2(4) + 3 = 8 + 3 = 11.</p>
+            </div>
+            <div class="grafik">
+                <h3>Grafik</h3>
+                <input type="text" id="linear-function" placeholder="Masukkan fungsi linear (misal: 2*x + 3)">
+                <button onclick="updateLinearGraph()">Update Grafik</button>
+                <canvas id="grafik-linear"></canvas>
+                <canvas id="grafik-rasional" style="display: none"></canvas>
+                <canvas id="grafik-irasional" style="display: none"></canvas>
+            </div>
+            <div class="perhitungan">
+                <h3>Perhitungan Titik Koordinat</h3>
+                <p>Untuk menentukan titik potong dengan sumbu x (y=0):</p>
+                <p>0 = mx + c &rarr; x = -c/m</p>
+                <p>Untuk menentukan titik potong dengan sumbu y (x=0):</p>
+                <p>y = c</p>
+            </div>
+            <section id="fungsi-linear">
+                <h2>Fungsi Linear</h2>
+                <div class="materi">
+                    <h3>Materi</h3>
+                    <p>Fungsi linear adalah fungsi yang membentuk garis lurus. Bentuk umum adalah y = ax + b.</p>
+                </div>
+                <div class="solusi">
+                    <h3>Solusi</h3>
+                    <label for="linear-a">Masukkan nilai a (misal: 2)</label>
+                    <input type="number" id="linear-a" placeholder="Masukkan nilai a (misal: 2)"><br>
+                    <label for="linear-b">Masukkan nilai b (misal: 3)</label>
+                    <input type="number" id="linear-b" placeholder="Masukkan nilai b (misal: 3)">
+                    <button onclick="solveLinear()">Selesaikan</button>
+                    <p id="linear-solution"></p>
+                </div>
+            </section>
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Kelompok 7</p>
+            <p>Anggota:</p>
+            <ul>
+                <li>1. Rama Tri Ramdhani</li>
+                <li>2. Farizal Muztahidin</li>
+                <li>3. Adi muhamad akbar saputra</li>
+                <li>4. Hasbi Rabbani</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

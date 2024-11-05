@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fungsi Rasional</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.0/math.min.js"></script>
+
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="linear.html">Fungsi Linear</a></li>
+            <li><a href="rasional.html">Fungsi Rasional</a></li>
+            <li><a href="irasional.html">Fungsi Irasional</a></li>
+            <li><a href="geogebra.html">Geogebra</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Belajar Kalkulus Dengan Mudah</h1>
+    </header>
+    
+    <main>
+        <section id="fungsi-rasional">
+            <h2>Fungsi Rasional</h2>
+            <div class="materi">
+                <h3>Materi</h3>
+                <p>Fungsi rasional adalah fungsi yang merupakan perbandingan dari dua polinomial. Bentuk umum fungsi rasional adalah f(x) = P(x)/Q(x), di mana P(x) dan Q(x) adalah polinomial, dan Q(x) ≠ 0.</p>
+            </div>
+            <div class="rumus">
+                <h3>Rumus</h3>
+                <p>f(x) = P(x) / Q(x)</p>
+            </div>
+            <div class="contoh">
+                <h3>Contoh Soal</h3>
+                <p>Misalkan P(x) = x^2 - 1 dan Q(x) = x - 1. Fungsi rasionalnya adalah f(x) = (x^2 - 1) / (x - 1). Sederhanakan fungsi tersebut.</p>
+                <p>Penyelesaian: f(x) = (x + 1)(x - 1) / (x - 1) = x + 1 (untuk x ≠ 1).</p>
+            </div>
+            <div class="grafik">
+                <h3>Grafik</h3>
+                <label for="a">Masukkan koefisien untuk P(x) (ax^2 + bx + c):</label><br>
+                <input type="number" id="a1" placeholder="Koefisien a">
+                <input type="number" id="b1" placeholder="Koefisien b">
+                <input type="number" id="c1" placeholder="Koefisien c"><br>
+
+                <label for="d">Masukkan koefisien untuk Q(x) (dx^2 + ex + f):</label><br>
+                <input type="number" id="d1" placeholder="Koefisien d">
+                <input type="number" id="e1" placeholder="Koefisien e">
+                <input type="number" id="f1" placeholder="Koefisien f"><br>
+                <button onclick="updateRasionalGraph()">Update Grafik</button>
+                <canvas id="grafik-rasional"></canvas>
+                <canvas id="grafik-linear" style="display: none"></canvas>
+                <canvas id="grafik-irasional" style="display: none"></canvas>
+            </div>
+            <div class="perhitungan">
+                <h3>Perhitungan Titik Koordinat</h3>
+                <p>Untuk menentukan titik potong dengan sumbu x (f(x)=0):</p>
+                <p>P(x) = 0 &rarr; x = solusi dari P(x) = 0</p>
+                <p>Untuk menentukan titik potong dengan sumbu y (x=0):</p>
+                <p>f(0) = P(0) / Q(0)</p>
+            </div>
+            <section>
+                <div class="solusi">
+                    <h3>Solusi</h3>
+                    <label for="a">Masukkan koefisien untuk P(x) (ax^2 + bx + c):</label><br>
+                    <input type="text" id="a" placeholder="a (untuk P(x))">
+                    <input type="text" id="b" placeholder="b (untuk P(x))">
+                    <input type="text" id="c" placeholder="c (untuk P(x))"><br>
+    
+                    <label for="d">Masukkan koefisien untuk Q(x) (dx^2 + ex + f):</label><br>
+                    <input type="text" id="d" placeholder="d (untuk Q(x))">
+                    <input type="text" id="e" placeholder="e (untuk Q(x))">
+                    <input type="text" id="f" placeholder="f (untuk Q(x))"><br>
+    
+                    <button onclick="solveRasional()">Selesaikan</button>
+                    <p id="rasional-solution"></p>
+                    <p id="asimtot-solution"></p> <!-- Menambahkan output untuk asimtot -->
+                </div>
+                <div class="solusi">
+                    <h3>Solusi</h3>
+                    <label for="a">Masukkan koefisien untuk P(x) (ax^2 + bx + c):</label><br>
+                    <input type="text" id="a" placeholder="a (untuk P(x))">
+                    <input type="text" id="b" placeholder="b (untuk P(x))">
+                    <input type="text" id="c" placeholder="c (untuk P(x))"><br>
+    
+                    <label for="d">Masukkan koefisien untuk Q(x) (dx^2 + ex + f):</label><br>
+                    <input type="text" id="d" placeholder="d (untuk Q(x))">
+                    <input type="text" id="e" placeholder="e (untuk Q(x))">
+                    <input type="text" id="f" placeholder="f (untuk Q(x))"><br>
+    
+                    <button onclick="solveRasional()">Selesaikan</button>
+                    <p id="rasional-solution"></p>
+                    <p id="asimtot-solution"></p> <!-- Menambahkan output untuk asimtot -->
+                </div>
+            </section>
+            
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Kelompok 7</p>
+            <p>Anggota:</p>
+            <ul>
+                <li>1. Rama Tri Ramdhani</li>
+                <li>2. Farizal Muztahidin</li>
+                <li>3. Adi muhamad akbar saputra</li>
+                <li>4. Hasbi Rabbani</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

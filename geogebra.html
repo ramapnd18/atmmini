@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geogebra</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.2/math.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="linear.html">Fungsi Linear</a></li>
+            <li><a href="rasional.html">Fungsi Rasional</a></li>
+            <li><a href="irasional.html">Fungsi Irasional</a></li>
+            <li><a href="geogebra.html">Geogebra</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Belajar Kalkulus Dengan Mudah</h1>
+    </header>
+    
+    <main>
+        
+        <section id="geogebra">
+            <h2>Geogebra</h2>
+            <div>
+                <!-- GeoGebra Applet Container -->
+                <div id="ggb-element"></div>
+
+                <!-- Custom Input and Button -->
+                <input type="text" id="functionInput" placeholder="Enter function, e.g., sin(x)"/>
+                <button onclick="updateGraph()">Plot</button>
+
+                <!-- GeoGebra Script -->
+                <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+                <script>
+                    // Initialize the GeoGebra applet
+                    var params = {
+                        appName: 'graphing',
+                        width: 800,
+                        height: 600,
+                        showToolBar: true,
+                        showAlgebraInput: true,
+                        showMenuBar: true,
+                    }
+                    var ggbApplet = new GGBApplet(params, true)
+
+                    // Inject the GeoGebra applet into the div with ID 'ggb-element' on page load
+                    window.addEventListener('load', function () {
+                        ggbApplet.inject('ggb-element')
+                    })
+
+                    // Function to update the graph with a custom function
+                    function updateGraph() {
+                        var input = document.getElementById('functionInput').value // Get the input value
+                        if (input) {
+                        // Check if input is not empty
+                        ggbApplet.evalCommand(input) // Set the function in GeoGebra
+                        }
+                    }
+                </script>
+  
+            </div>    
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Kelompok 7</p>
+            <p>Anggota:</p>
+            <ul>
+                <li>1. Rama Tri Ramdhani</li>
+                <li>2. Farizal Muztahidin</li>
+                <li>3. Adi muhamad akbar saputra</li>
+                <li>4. Hasbi Rabbani</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
