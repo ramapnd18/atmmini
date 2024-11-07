@@ -11,17 +11,26 @@
 </head>
 <body>
     
-    <nav>
-        <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="linear.html">Fungsi Linear</a></li>
-            <li><a href="rasional.html">Fungsi Rasional</a></li>
-            <li><a href="irasional.html">Fungsi Irasional</a></li>
-            <li><a href="geogebra.html">Geogebra</a></li>
-            <li><a href="tentang.html">Tentang Kami</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="index.html">Dashboard</a>
+            </div>
+            <button class="navbar-toggler" onclick="toggleNavbar()">
+                &#9776;
+            </button>
+            <div class="navbar-links" id="navbarLinks">
+                <ul>
+                    <li><a href="linear.html">Fungsi Linear</a></li>
+                    <li><a href="rasional.html">Fungsi Rasional</a></li>
+                    <li><a href="irasional.html">Fungsi Irasional</a></li>
+                    <li><a href="geogebra.html">Geogebra</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-
+    
     <header>
         <h1>Belajar Kalkulus Dengan Mudah</h1>
     </header>
