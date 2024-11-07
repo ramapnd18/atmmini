@@ -143,6 +143,90 @@ window.solveLinear = function() {
 };
 
 // Fungsi untuk menyelesaikan persamaan rasional
+window.solveRasional4 = function() {
+    const a = parseFloat(document.getElementById('a4').value);
+    const b = parseFloat(document.getElementById('b4').value);
+    const c = parseFloat(document.getElementById('c4').value);
+    const d = parseFloat(document.getElementById('d4').value);
+
+    let roots = [];
+
+    // Menghitung akar untuk pembilang
+    if (a !== 0) {
+        // Jika a tidak 0, hitung akar linear
+        roots = [-b / a];
+    } else {
+        if (b !== 0) {
+            roots = [0]; // Jika pembilang adalah konstanta non-nol
+        } else {
+            alert('Pembilang adalah konstanta nol.');
+            return;
+        }
+    }
+
+    // Menghitung posisi asimtot
+    let verticalAsymptote = null;
+    if (c !== 0) {
+        verticalAsymptote = -d / c;
+    } else {
+        if (d !== 0) {
+            verticalAsymptote = 0; // Jika penyebut adalah konstanta non-nol
+        } else {
+            alert('Penyebut tidak boleh nol.');
+            return;
+        }
+    }
+
+    document.getElementById('rasional-solution-4').innerText = `Akar: ${roots.length > 0 ? roots.join(', ') : 'Tidak ada akar'}, Asimtot Vertikal: x = ${verticalAsymptote}`;
+};
+
+window.solveRasional5 = function() {
+    const a = parseFloat(document.getElementById('a5').value);
+    const b = parseFloat(document.getElementById('b5').value);
+    const c = parseFloat(document.getElementById('c5').value);
+    const d = parseFloat(document.getElementById('d5').value);
+    const e = parseFloat(document.getElementById('e5').value);
+
+    let roots = [];
+
+    // Menghitung akar untuk pembilang
+    if (a !== 0) {
+        // Persamaan kuadrat: ax^2 + bx + c = 0
+        const discriminant = b * b - 4 * a * c;
+        if (discriminant > 0) {
+            roots.push((-b + Math.sqrt(discriminant)) / (2 * a));
+            roots.push((-b - Math.sqrt(discriminant)) / (2 * a));
+        } else if (discriminant === 0) {
+            roots.push(-b / (2 * a));
+        } else {
+            roots.push('Akar kompleks');
+        }
+    } else if (b !== 0) {
+        // Persamaan linear: bx + c = 0
+        roots.push(-c / b);
+    } else if (c !== 0) {
+        roots.push('Tidak ada akar'); // Pembilang adalah konstanta non-nol
+    } else {
+        alert('Pembilang adalah konstanta nol.');
+        return;
+    }
+
+    // Menghitung posisi asimtot
+    let verticalAsymptote = null;
+    if (d !== 0) {
+        verticalAsymptote = -e / d;
+    } else {
+        if (e !== 0) {
+            verticalAsymptote = 0; // Penyebut adalah konstanta non-nol
+        } else {
+            alert('Penyebut tidak boleh nol.');
+            return;
+        }
+    }
+
+    document.getElementById('rasional-solution-5').innerText = `Akar: ${roots.join(', ')}, Asimtot Vertikal: x = ${verticalAsymptote}`;
+};
+
 
 document.addEventListener('DOMContentLoaded', function() {
     window.solveRasional = function() {

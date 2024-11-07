@@ -65,6 +65,45 @@
                 <p>Untuk menentukan titik potong dengan sumbu y (x=0):</p>
                 <p>f(0) = P(0) / Q(0)</p>
             </div>
+            
+            <section id="fungsi-rasional-4">
+                <h2>Fungsi Rasional (4 Variabel)</h2>
+                <div class="solusi">
+                    <label for="a4">Koefisien a (Pembilang):</label>
+                    <input type="number" id="a4" placeholder="Masukkan a"><br>
+                    <label for="b4">Koefisien b (Pembilang):</label>
+                    <input type="number" id="b4" placeholder="Masukkan b"><br>
+                    
+                    <label for="c4">Koefisien c (Penyebut):</label>
+                    <input type="number" id="c4" placeholder="Masukkan c"><br>
+                    <label for="d4">Koefisien d (Penyebut):</label>
+                    <input type="number" id="d4" placeholder="Masukkan d"><br>
+            
+                    <button onclick="solveRasional4()">Selesaikan</button>
+                    <p id="rasional-solution-4"></p>
+                </div>
+            </section>
+            
+            <section id="fungsi-rasional-5">
+                <h2>Fungsi Rasional (5 Variabel)</h2>
+                <div class="solusi">
+                    <label for="a5">Koefisien a (Pembilang):</label>
+                    <input type="number" id="a5" placeholder="Masukkan a"><br>
+                    <label for="b5">Koefisien b (Pembilang):</label>
+                    <input type="number" id="b5" placeholder="Masukkan b"><br>
+                    <label for="c5">Koefisien c (Pembilang):</label>
+                    <input type="number" id="c5" placeholder="Masukkan c"><br>
+                    
+                    <label for="d5">Koefisien d (Penyebut):</label>
+                    <input type="number" id="d5" placeholder="Masukkan d"><br>
+                    <label for="e5">Koefisien e (Penyebut):</label>
+                    <input type="number" id="e5" placeholder="Masukkan e"><br>
+            
+                    <button onclick="solveRasional5()">Selesaikan</button>
+                    <p id="rasional-solution-5"></p>
+                </div>
+            </section>
+                
             <section>
                 <div class="solusi">
                     <h3>Solusi</h3>
@@ -82,22 +121,7 @@
                     <p id="rasional-solution"></p>
                     <p id="asimtot-solution"></p> <!-- Menambahkan output untuk asimtot -->
                 </div>
-                <div class="solusi">
-                    <h3>Solusi</h3>
-                    <label for="a">Masukkan koefisien untuk P(x) (ax^2 + bx + c):</label><br>
-                    <input type="text" id="a" placeholder="a (untuk P(x))">
-                    <input type="text" id="b" placeholder="b (untuk P(x))">
-                    <input type="text" id="c" placeholder="c (untuk P(x))"><br>
-    
-                    <label for="d">Masukkan koefisien untuk Q(x) (dx^2 + ex + f):</label><br>
-                    <input type="text" id="d" placeholder="d (untuk Q(x))">
-                    <input type="text" id="e" placeholder="e (untuk Q(x))">
-                    <input type="text" id="f" placeholder="f (untuk Q(x))"><br>
-    
-                    <button onclick="solveRasional()">Selesaikan</button>
-                    <p id="rasional-solution"></p>
-                    <p id="asimtot-solution"></p> <!-- Menambahkan output untuk asimtot -->
-                </div>
+                
             </section>
             
         </section>
