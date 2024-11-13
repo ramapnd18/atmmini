@@ -8,7 +8,6 @@ body, h1, h2, h3, p, ul, li, input, button {
     
 }
 
-/* General styles for the navbar */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,7 +15,7 @@ body {
 }
 
 .navbar {
-    background-color: #333;
+    background:linear-gradient(to right, #8A50C9, #335EF8);
     overflow: hidden;
     position: fixed;
     width: 100%;
@@ -65,7 +64,7 @@ body {
 }
 
 .navbar-links ul li a:hover {
-    background-color: #575757;
+    background-color: #6EACDA;
     border-radius: 4px;
 }
 
@@ -94,7 +93,7 @@ body {
     }
     
     .navbar-links ul li a:hover {
-        background-color: #444;
+        background-color: #6EACDA;
     }
     
     .navbar-links.active {
@@ -105,15 +104,15 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
-    background: #03346E;
+    padding: px;
+    background: #000000;
     color: #fff;
     margin-top: 70px;
 }
 
 main {
     padding: 20px;
-    max-width: 880px;
+    max-width: 1280px;
     margin: auto;
 }
 
@@ -123,21 +122,31 @@ section {
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 1200px;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: bold;
 }
 
 h2 {
-    color: #03346E;
+    font-size: 36px;
+    color: #000000;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 h3 {
-    color: #021526;
+    color: #000000;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
-p {
+p:not(footer){
+    font-size: 20px;
     margin-bottom: 10px;
+    text-align: justify;
 }
 
 input, button {
@@ -148,7 +157,7 @@ input, button {
 }
 
 button {
-    background: #03346E;
+    background: #335EF8;
     color: #fff;
     cursor: pointer;
     border: none;
@@ -158,6 +167,16 @@ button:hover {
     background: #6EACDA;
 }
 
+.btn{
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 12pt;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 100px;
+    width: 200px;
+}
+
 canvas {
     margin: 20px 0;
     background: #fafafa;
@@ -165,8 +184,12 @@ canvas {
     border-radius: 5px;
 }
 
+svg {
+    max-width: 100%;
+}
+
 footer {
-    background-color: #03346E; /* Warna latar belakang */
+    background:linear-gradient(to right, #8A50C9, #335EF8);
     color: white; /* Warna teks */
     text-align: center; /* Teks rata tengah */
     padding:  20px 0;  
