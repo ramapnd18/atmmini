@@ -69,7 +69,7 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .navbar-toggler {
         display: block;
     }
@@ -184,8 +184,9 @@ canvas {
     border-radius: 5px;
 }
 
-svg {
+img {
     max-width: 100%;
+    /* min-width: 50%; */
 }
 
 footer {
