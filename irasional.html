@@ -34,57 +34,101 @@
     </header>
     
     <main>
-        <section id="fungsi-irasional">
-            <h2>Fungsi Irasional</h2>
-            <div class="materi">
-                <h3>Materi</h3>
-                <p>Fungsi irasional adalah fungsi yang mengandung akar dari variabel, seperti akar kuadrat, akar kubik, dll. Bentuk umum fungsi irasional adalah y = √f(x), di mana f(x) adalah sebuah fungsi.</p>
-            </div>
-            <div class="rumus">
-                <h3>Rumus</h3>
-                <p>y = √f(x)</p>
-            </div>
-            <div class="contoh">
-                <h3>Contoh Soal</h3>
-                <p>Misalkan f(x) = x + 1. Fungsi irasionalnya adalah y = √(x + 1). Hitung nilai y ketika x = 3.</p>
-                <p>Penyelesaian: y = √(3 + 1) = √4 = 2.</p>
-            </div>
-            <div class="grafik">
-                <h3>Grafik</h3>
-                <input type="text" id="irasional-function" placeholder="Masukkan fungsi irasional (misal: sqrt(x + 1))">
-                <button onclick="updateIrasionalGraph()">Update Grafik</button>
-                <canvas id="grafik-irasional"></canvas>
-                <canvas id="grafik-linear" style="display: none"></canvas>
-                <canvas id="grafik-rasional" style="display: none"></canvas>
-            </div>
-            <div class="perhitungan">
-                <h3>Perhitungan Titik Koordinat</h3>
-                <p>Untuk menentukan titik potong dengan sumbu x (y=0):</p>
-                <p>0 = √f(x) &rarr; f(x) = 0 &rarr; x = solusi dari f(x) = 0</p>
-                <p>Untuk menentukan titik potong dengan sumbu y (x=0):</p>
-                <p>y = √f(0)</p>
-            </div>
-            <section id="fungsi-irasional">
-                <h2>Fungsi Irasional</h2>
-                <div class="materi">
-                    <h3>Materi</h3>
-                    <p>Fungsi irasional adalah fungsi yang mengandung akar dari variabel. Contoh: y = √(ax + b).</p>
+        <section id="fungsi-linear">
+            <section style="display: flex;">
+                <div style="max-width: 56%; display: flex; flex-direction: column; padding-right: 50px">
+                    <h1>Definisi, Rumus - Rumus, Contoh Soal dan Grafik Fungsi Irasional</h1>
+                    <br>
+                    <img style="max-width: 300px; margin:auto;" src="img/grafik-Irasional.png" alt="Linear-grafik">
                 </div>
-                <div class="solusi">
-                    <h3>Solusi</h3>
-                    <input type="number" id="irasional-a" placeholder="Masukkan nilai a (misal: 1)">
-                    <input type="number" id="irasional-b" placeholder="Masukkan nilai b (misal: 2)">
-                    <button onclick="solveIrasional()">Selesaikan</button>
-                    <p id="irasional-solution"></p>
+                <div style="  margin-left: 10px;">
+                    <img width="451" src="img/C4.png" alt="C4">
+                        
                 </div>
             </section>
-        </section>
+            <section>
+                <h2>Definisi Fungsi Irasional</h2>
+                <p>Fungsi rasonal adalah fungsi yang memetakan suatu bilangan real x ke bilangan Irasional <span class="frac"><sup>p(x)</sup><span>/</span><sub>q(x)</sub></span>.dengan <span class="frac">p(x)</span>dan <span class="frac">q(x)</span> merupakan suatu polinom dan <span class="frac">p(x) &ne; 0</span></p>
+            </section>
+            <section>
+                <div class="rumus">
+                    <h2>Rumus - Rumus Fungsi Irasional</h2>
+                    <h3>1. Bentuk Umum Fungsi Irasional</h3>
+                    <p>Bentuk umum fungsi Irasional adalah sebagai berikut :</p>
+                    <br>
+                    <div style="width: 100%; display: flex; justify-content: center; align-content: center;">
+                        <img style="max-width: 750px;" src="img/rumus-Irasional.png" alt="">
+                    </div>
+                    <h3>2.Asimtot Fungsi Irasional</h3>
+                    <p>Asimtot adalah suatu garis yang terus didekati oleh kurva (garis lengkung) sampai jarak tak hinga.</p>
+                    <br>
+                    <div style="width: 100%; display: flex; justify-content: center; align-content: center;">
+                        <img src="img/grafik-Irasional2.png" alt="">                       
+                    </div>
+                    <ul style="margin-left:30px; font-size: 12pt;">
+                        <li>Asimtot tegak (Vertical Asymtote)</li>
+                        <p>Fungsi y = <span class="frac"><sup>p(x)</sup><span>/</span><sub>q(x)</sub></span> memiliki asimtot tegak <b>x = k</b> jika <b>q(x) = 0</b> dan<b>p(x) &ne; 0</b></p>
+                        <li>Asimtot datar (Horizontal Asymtote)</li>
+                        <p>Fungsi <span class="frac">y = f(x)</span> memiliki asimtot datar <b>y = k</b> jika <span class="frac"><sup>lim</sup><sub>x ->&infin;</sub></span> f(x)=k</p>
+                        <li>Asimtot miring (Slant Asymtote)</li>
+                        <p>Fungsi y = <span class="frac"><sup>ax<sup>n</sup>+ bx<sup>n-1</sup>+...+c</sup><span>/</span><sub><sup>px<sup>n</sup>+ qx<sup>n-1</sup>+...+r</sub></span> memiliki asimtot miring jika <span class="frac">n > m</span>maka cara mencarinya adalah dengan melakukan pembagian polinomial sehingga kita akan memperoleh hasil bagi nya sebagai <b>asimtot</b></p>
+                    </ul>
+                    <br>
+                    <h3>3. Domain & Range</h3>
+                    <p>Bentuk umum fungsi Irasional adalah sebagai berikut :</p>
+                    <br>
+                    <ul style="margin-left:30px; font-size: 12pt;">
+                        <li>Domain /daerah asal fungsi Irasional adalah semua x kecuali asimtot tegaknya <span class="frac">(penyebutnya &ne;0)</span></li>
+                        <div style="width: 100%; display: flex; justify-content: center; align-content: center;">
+                            <img style="max-width: 350px;" src="img/domain.png" alt="">
+                        </div>
+                        <li>Rangge /daerah hasil adalah semua y kecuali asimtot datarnya (y &ne; <span class="frac"><sup>a</sup><sub>p</sub></span>)</li>
+                        <div style="width: 100%; display: flex; justify-content: center; align-content: center;">
+                            <img style="max-width: 350px;" src="img/range.png" alt="">
+                        </div>
+                    </ul>
+                    
+                    <br>
+                </div>
+                
+            </section>
+                <section>
+                    <div class="grafik">
+                        <h2>Contoh Soal Fungsi Irasional</h2>
+                        <div style="width: 100%; display: flex; justify-content: center; align-content: center;">
+                            <img style="max-width: 100%;" src="img/contoh-Irasional.png" alt="contoh Irasional">
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="grafik">
+                        <h2>Menggambar Grafik  Fungsi Irasional</h2>
+                        <ul style="margin-left:30px; font-size: 12pt;">
+                            <li>Menentukan titik potong terhadap sumbu x, dengan y=0</li>
+                            <li>Menentukan titik potong terhadap sumbu y, dengan x=0</li>
+                            <li>Menentukan asimtot tegak, syarat penyebut = 0</li>
+                            <li>Menentukan asimtot datar</li>
+                            <li>Menentukan titik simetris</li>
+                            <li>Menuliskan domain dan range</li>
+                            <li>Menggambar sketsa grafik fungsi</li>
+                        </ul>
+                        <div style="width: 100%; display: flex; justify-content: center; align-content: center;">
+                            <img style="max-width: 750px;" src="img/contoh-Irasional2.png" alt="contoh Irasional">
+                        </div><div style="width: 100%; display: flex; justify-content: center; align-content: center;">
+                            <img style="max-width: 100%;" src="img/grafik-Irasional3.png" alt="grafik Irasional">
+                        </div>
+                        <p>Sekian untuk materi fungsi Irasional terimakasih atas kunjungan nya, silahkan perbanyak latihan soal untuk meningkatkan kemampuan anda dalam mengerjakan soal fungsi Irasional.</p>
+                    </div>
+                </section>
+            </section>
     </main>
+
     
     <script src="scripts.js"></script>
     <footer>
         <div class="footer-content">
-            <b>&copy; 2024 Kelompok 7</b>
+            <a href="tentang.html" style="text-decoration: none; color:white;"><b>&copy; 2024 Kelompok 7</b></a>
         </div>
     </footer>
 </body>
