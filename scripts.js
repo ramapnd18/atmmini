@@ -29,10 +29,10 @@ function linear() {
 
 // // scripts.js
 
-// function toggleNavbar() {
-//     const navbarLinks = document.getElementById('navbarLinks');
-//     navbarLinks.classList.toggle('active');
-// }
+function toggleNavbar() {
+    const navbarLinks = document.getElementById('navbarLinks');
+    navbarLinks.classList.toggle('active');
+}
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     // Grafik awal untuk setiap fungsi
