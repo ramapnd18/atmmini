@@ -1,4 +1,4 @@
-/* styles.css */
+/* styles.css
 
 /* Reset margin dan padding */
 body, h1, h2, h3, p, ul, li, input, button {
@@ -69,7 +69,7 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 1080px) {
+@media (max-width: 998px) {
     .navbar-toggler {
         display: block;
     }
@@ -118,7 +118,6 @@ main {
 section {
     background: #fff;
     padding: 20px;
-    margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -186,7 +185,7 @@ canvas {
 
 img {
     max-width: 100%;
-    margin: 5px;
+    /* margin: 5px; */
     /* min-width: 50%; */
 }
 
@@ -231,7 +230,7 @@ span.frac {
 
   /* Bagian Kalkulator */
 #kalkulator {
-    background: #f9f9f9;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -294,4 +293,4 @@ span.frac {
     color: #333;
     text-align: center;
     margin-top: 10px;
-}
+} 
